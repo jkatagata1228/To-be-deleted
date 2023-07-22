@@ -37,13 +37,13 @@ body {
   text-decoration: none;
   color: #ffffffcc;
 }
+
 .navbar span {
   margin-left: auto;
   color: #ffffffcc;
 }
 
 .logIn-btn {
-  margin-left: auto;
   cursor: pointer;
   background: #00b4ff;
   color: #ffffffcc;
@@ -53,6 +53,22 @@ body {
   cursor: pointer;
   background: #00b4ff;
   color: #ffffffcc;
+}
+
+/* ここから以下はsignUp関連 */
+
+.signUp-btn {
+  margin-right: 1em;
+  cursor: pointer;
+  background: #00b4ff;
+  color: #ffffffcc;
+}
+
+.signUp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: "100vh";
 }
 
 .list-bg {

@@ -1,11 +1,13 @@
 const Register = () => {
   return (
-    <div>
+    <div className="signUp-container">
       <form method="POST" action="/api/auth/signup">
-        <input name="name" type="text" placeholder="이름" />
-        <input name="email" type="text" placeholder="이메일" />
-        <input name="password" type="password" placeholder="비번" />
-        <button type="submit">id/pw 가입요청</button>
+        <input name="name" type="text" placeholder="Name" />
+        <input name="email" type="text" placeholder="Email" />
+        <input name="password" type="password" placeholder="Password" />
+        <button className="signUp-btn" type="submit">
+          Sign Up
+        </button>
       </form>
     </div>
   );
