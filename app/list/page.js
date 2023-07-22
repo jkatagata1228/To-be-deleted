@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 const List = async () => {
   const db = (await connectDB).db("forum");
-  let result = await db.collection("post").find().toArray();
+  await db.collection("post").find().toArray();
 
   return (
     <div className="list-bg">

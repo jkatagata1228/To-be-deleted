@@ -7,7 +7,7 @@ const handler = async (req, res) => {
     req.body.password = hash;
     let db = (await connectDB).db("forum");
     await db.collection("user_cred").insertOne(req.body);
-    res.status(200).json("ようこそ！ディアブロ II リザレクテッド世界へ！");
+    res.redirect(302, "/");
   }
 };
 

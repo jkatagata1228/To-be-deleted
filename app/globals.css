@@ -58,7 +58,7 @@ body {
 /* ここから以下はsignUp関連 */
 
 .signUp-btn {
-  margin-right: 1em;
+  margin-right: 1px;
   cursor: pointer;
   background: #00b4ff;
   color: #ffffffcc;
@@ -116,7 +116,13 @@ body {
   color: #ffffffcc;
 }
 
+/* ここから以下はdetail-page関連 */
+
 .detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: "100vh";
   color: #ffffffcc;
 }
 
