@@ -22,11 +22,13 @@ const Comment = (props) => {
             return <p key={i}>{a.content}</p>;
           })
         : "Loading..."}
-      <input
-        onChange={(e) => {
-          setComment(e.target.value);
-        }}
-      ></input>
+      <div className="comment">
+        <input
+          onChange={(e) => {
+            setComment(e.target.value);
+          }}
+        ></input>
+      </div>
       <button
         onClick={() => {
           fetch("/api/comment/new", {

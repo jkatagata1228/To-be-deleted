@@ -8,8 +8,8 @@ const Edit = async (props) => {
     .findOne({ _id: new ObjectId(props.params._id) });
 
   return (
-    <div className="p-20">
-      <h4>Edit</h4>
+    <div className="edit-container">
+      <h4>修正ページ</h4>
       <form action="/api/post/edit" method="POST">
         <input
           name="_id"

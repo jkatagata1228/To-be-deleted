@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: "100vh";
+  height: 100vh;
 }
 
 #video {
@@ -68,7 +68,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: "100vh";
+  text-align: center;
 }
 
 .list-bg {
@@ -119,16 +119,32 @@ body {
 /* ここから以下はdetail-page関連 */
 
 .detail-container {
+  background-color: #042431;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: "100vh";
+  height: 100vh;
   color: #ffffffcc;
+  text-align: center;
 }
 
-.p-20 {
+.comment {
+  margin: auto;
+  text-align: center;
+}
+
+/* ここから以下はedit-page関連 */
+
+.edit-container {
+  background-color: #042431;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   color: #ffffffcc;
-  padding: 20px;
+  text-align: center;
 }
 
 input {
@@ -140,10 +156,24 @@ input {
 
 button {
   padding: 10px 15px;
-  background: lightgray;
+  cursor: pointer;
+  background: #00b4ff;
+  color: #ffffffcc;
   border: none;
   border-radius: 5px;
 }
+
+.write-container {
+  background-color: #042431;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffffcc;
+  text-align: center;
+}
+/* ここから以下はその他関連 */
 
 a {
   text-decoration: none;
