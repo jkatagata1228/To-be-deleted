@@ -13,9 +13,11 @@ https://portfolio-jang.vercel.app
 ## 仕様スタック
 
 - Programming Language
+  - HTML
   - CSS
   - JavaScrip
 - Library & Framework
+  - React
   - Next.js
 - Datebase
   - MongoDB
@@ -37,17 +39,23 @@ https://portfolio-jang.vercel.app
 
 ## 主な機能
 
+**ユーザー関連**
+
+- 新規ユーザ登録機能
+- ログイン機能（メール＆パスワード,GitHub）
+
 **ドキュメント関連**
 
 - ドキュメントリスト照会機能（Datebase データ出力）
 - ドキュメント詳細ページ機能（Dynamic Routes）
 - ドキュメント修正及び修正ページ機能（Datebase データ修正）
 - ドキュメント削除機能（Datebase データ削除）
+- コメント登録機能
 
 **ユーザー関連**
 
-- ログイン機能（
+- ログイン機能（メール＆パスワード,GitHub）
 
-## 参考
+## 参考サイト
 
 https://us.forums.blizzard.com/en/d2r

@@ -71,6 +71,13 @@ body {
   text-align: center;
 }
 
+.signUp-container input {
+  box-sizing: border-box;
+  padding: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
+
 .list-bg {
   background: rgb(249, 250, 255);
   padding: 10px;
@@ -131,6 +138,7 @@ body {
 
 .comment {
   margin: auto;
+  margin-bottom: 10px;
   text-align: center;
 }
 
@@ -147,7 +155,7 @@ body {
   text-align: center;
 }
 
-input {
+.edit-container input {
   box-sizing: border-box;
   padding: 10px;
   display: block;
@@ -163,6 +171,8 @@ button {
   border-radius: 5px;
 }
 
+/* ここから以下はwrite-page関連 */
+
 .write-container {
   background-color: #042431;
   display: flex;
@@ -173,6 +183,14 @@ button {
   color: #ffffffcc;
   text-align: center;
 }
+
+.write-container input {
+  box-sizing: border-box;
+  padding: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
+
 /* ここから以下はその他関連 */
 
 a {

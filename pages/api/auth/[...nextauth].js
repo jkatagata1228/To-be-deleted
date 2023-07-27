@@ -17,6 +17,9 @@ export const authOptions = {
         email: { label: "email", type: "text" },
         password: { label: "password", type: "password" },
       },
+      signIn: {
+        label: "会員登録",
+      },
 
       async authorize(credentials) {
         let db = (await connectDB).db("forum");

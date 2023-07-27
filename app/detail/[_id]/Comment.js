@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 
 const Comment = (props) => {
-  let [comment, setComment] = useState("");
-  let [data, setData] = useState([]);
+  const [comment, setComment] = useState("");
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch(`/api/comment/list?_id=${props._id}`)
@@ -12,34 +12,47 @@ const Comment = (props) => {
       .then((result) => {
         setData(result);
       });
-  }, []);
+  }, [props._id]);
+
+  const handleCommentSubmit = () => {
+    fetch("/api/comment/new", {
+      method: "POST",
+      body: JSON.stringify({ comment: comment, _id: props._id }),
+    })
+      .then((r) => r.json())
+      .then((result) => {
+        setComment("");
+        fetch(`/api/comment/list?_id=${props._id}`)
+          .then((r) => r.json())
+          .then((newData) => {
+            setData(newData);
+          });
+      });
+  };
 
   return (
     <div>
       <hr></hr>
       {data.length > 0
-        ? data.map((a, i) => {
-            return <p key={i}>{a.content}</p>;
-          })
+        ? data.map((a, i) => (
+            <div key={i}>
+              <p>
+                {a.author} : {a.content}
+              </p>
+            </div>
+          ))
         : "Loading..."}
       <div className="comment">
         <input
+          value={comment}
           onChange={(e) => {
             setComment(e.target.value);
           }}
         ></input>
       </div>
-      <button
-        onClick={() => {
-          fetch("/api/comment/new", {
-            method: "POST",
-            body: JSON.stringify({ comment: comment, _id: props._id }),
-          });
-        }}
-      >
-        push
-      </button>
+      <button onClick={handleCommentSubmit}>コメント作成</button>
     </div>
   );
 };
+
 export default Comment;

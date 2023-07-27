@@ -11,7 +11,18 @@ const ListItem = (props) => {
             <Link prefetch={false} href={`detail/${a._id}`}>
               <h4>{a.title}</h4>
             </Link>
-            <button className="edit-link-btn">
+            <button
+              className="edit-link-btn"
+              onClick={(e) => {
+                fetch("/api/post/edit", {
+                  method: "POST",
+                }).then((res) => {
+                  if (res.status !== 200) {
+                    alert("ユーザ情報不一致");
+                  }
+                });
+              }}
+            >
               <Link href={`edit/${a._id}`}>
                 <p>修正</p>
               </Link>
@@ -22,11 +33,15 @@ const ListItem = (props) => {
                 fetch("/api/post/delete", {
                   method: "POST",
                   body: a._id,
-                }).then(() => {
-                  e.target.parentElement.style.opacity = 0;
-                  setTimeout(() => {
-                    e.target.parentElement.style.display = "none";
-                  }, 1000);
+                }).then((res) => {
+                  if (res.status == 200) {
+                    e.target.parentElement.style.opacity = 0;
+                    setTimeout(() => {
+                      e.target.parentElement.style.display = "none";
+                    }, 1000);
+                  } else {
+                    alert("ユーザ情報不一致");
+                  }
                 });
               }}
             >
